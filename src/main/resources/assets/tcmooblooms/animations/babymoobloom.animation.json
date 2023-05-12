@@ -1,0 +1,87 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.BabyMoobloom.Walk": {
+			"animation_length": 2.25,
+			"bones": {
+				"leg0": {
+					"rotation": {
+						"0.0": {
+							"vector": [17.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [-20, 0, 0]
+						},
+						"2.25": {
+							"vector": [17.5, 0, 0]
+						}
+					}
+				},
+				"leg1": {
+					"rotation": {
+						"0.0": {
+							"vector": [-17.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [17.5, 0, 0]
+						},
+						"2.25": {
+							"vector": [-17.5, 0, 0]
+						}
+					}
+				},
+				"leg2": {
+					"rotation": {
+						"0.0": {
+							"vector": [-17.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [17.5, 0, 0]
+						},
+						"2.25": {
+							"vector": [-17.5, 0, 0]
+						}
+					}
+				},
+				"leg3": {
+					"rotation": {
+						"0.0": {
+							"vector": [17.5, 0, 0]
+						},
+						"1.5": {
+							"vector": [-17.5, 0, 0]
+						},
+						"2.25": {
+							"vector": [17.5, 0, 0]
+						}
+					}
+				},
+				"flower": {
+					"scale": {
+						"vector": [1, 1, 1]
+					}
+				}
+			}
+		},
+		"animation.BabyMoobloom.Idle": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"flower": {
+					"scale": {
+						"0.0": {
+							"vector": [1, 1, 1]
+						},
+						"1.0": {
+							"vector": [0.98, 0.98, 0.98]
+						},
+						"2.0": {
+							"vector": [1, 1, 1]
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

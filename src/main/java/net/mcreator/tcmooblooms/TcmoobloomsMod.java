@@ -13,6 +13,8 @@
  */
 package net.mcreator.tcmooblooms;
 
+import software.bernie.geckolib3.GeckoLib;
+
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
@@ -28,6 +30,10 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
+
+import net.mcreator.tcmooblooms.init.TcmoobloomsModParticleTypes;
+import net.mcreator.tcmooblooms.init.TcmoobloomsModItems;
+import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.function.Supplier;
 import java.util.function.Function;
@@ -48,6 +54,12 @@ public class TcmoobloomsMod {
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
+		TcmoobloomsModItems.REGISTRY.register(bus);
+		TcmoobloomsModEntities.REGISTRY.register(bus);
+
+		TcmoobloomsModParticleTypes.REGISTRY.register(bus);
+
+		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
