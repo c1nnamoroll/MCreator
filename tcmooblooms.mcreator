@@ -3,17 +3,33 @@
     {
       "name": "Moobloom",
       "type": "animatedentity",
-      "sortid": 4,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moobloom",
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java",
           "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java"
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloom",
+      "type": "animatedentity",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java"
         ]
       }
     },
@@ -26,118 +42,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/tcmooblooms/loot_tables/entities/moobloom.json"
-        ]
-      }
-    },
-    {
-      "name": "MoobloomEntityDies",
-      "type": "procedure",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom_entity_dies",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityDiesProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "MoobloomEntityIsHurt",
-      "type": "procedure",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom_entity_is_hurt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityIsHurtProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
-      "name": "Buttercups",
-      "type": "particle",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "buttercups",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
-          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
-        ]
-      }
-    },
-    {
-      "name": "BabyMoobloom",
-      "type": "animatedentity",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_moobloom",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
-        ]
-      }
-    },
-    {
-      "name": "BabyProcedure",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       }
     }

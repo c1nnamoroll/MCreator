@@ -57,7 +57,7 @@
     "movementSpeed": 0.25,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 20,
+    "followRange": 16,
     "health": 10,
     "xpAmount": 0,
     "waterMob": false,
@@ -88,20 +88,20 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "entity.cow.ambient"
     },
     "hurtSound": {
-      "value": ""
+      "value": "entity.cow.hurt"
     },
     "deathSound": {
-      "value": ""
+      "value": "entity.cow.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "entity.cow.step"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_parent\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"follow_parent\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "babymoobloom.geo.json",
     "groupName": "head",
     "animation1": "animation.BabyMoobloom.Idle",
@@ -123,7 +123,7 @@
     "enable8": false,
     "enable9": false,
     "enable10": false,
-    "breedable": true,
+    "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,
     "headMovement": true,
@@ -137,9 +137,9 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 0.5,
-    "spawnThisMob": false,
+    "spawnThisMob": true,
     "doesDespawnWhenIdle": true,
-    "spawningProbability": 2,
+    "spawningProbability": 3,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,

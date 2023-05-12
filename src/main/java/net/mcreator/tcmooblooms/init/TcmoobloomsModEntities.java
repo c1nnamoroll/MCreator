@@ -30,7 +30,7 @@ public class TcmoobloomsModEntities {
 	public static final RegistryObject<EntityType<MoobloomEntity>> MOOBLOOM = register("moobloom",
 			EntityType.Builder.<MoobloomEntity>of(MoobloomEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MoobloomEntity::new)
 
-					.sized(0.9f, 1.4000000000000001f));
+					.sized(0.9f, 1.4f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

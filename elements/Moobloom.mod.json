@@ -13,12 +13,12 @@
       "fixedValue": 1.0
     },
     "modelWidth": 0.9,
-    "modelHeight": 1.4000000000000001,
+    "modelHeight": 1.4,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -207868,
+      "value": -146428,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
@@ -57,7 +57,7 @@
     "movementSpeed": 0.25,
     "armorBaseValue": 0.0,
     "trackingRange": 64,
-    "followRange": 20,
+    "followRange": 16,
     "health": 10,
     "xpAmount": 3,
     "waterMob": false,
@@ -94,14 +94,14 @@
       "value": "entity.cow.hurt"
     },
     "deathSound": {
-      "value": "entity.cow.death"
+      "value": "entity.cow.step"
     },
     "stepSound": {
       "value": "entity.cow.step"
     },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"-940\" y=\"11\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"follow_parent\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.WHEAT</field></block></value><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"breed\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "moobloom.geo.json",
     "groupName": "head",
     "animation1": "animation.Moobloom.Idle",
@@ -130,7 +130,7 @@
     "eyeHeight": true,
     "breedTriggerItems": [
       {
-        "value": "Items.WHEAT"
+        "value": "Blocks.WHEAT"
       }
     ],
     "ranged": false,
@@ -146,7 +146,7 @@
     "spawningProbability": 7,
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 2,
-    "maxNumberOfMobsPerGroup": 2,
+    "maxNumberOfMobsPerGroup": 3,
     "restrictionBiomes": [
       {
         "value": "meadow"
