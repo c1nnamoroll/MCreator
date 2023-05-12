@@ -19,11 +19,14 @@ import net.minecraft.world.level.material.Material;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
+import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
 import net.minecraft.world.entity.ai.goal.FollowParentGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
@@ -90,6 +93,11 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
+	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
+		return 0.5F;
+	}
+
+	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
@@ -103,6 +111,8 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		this.goalSelector.addGoal(4, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(5, new BreedGoal(this, 1));
 		this.goalSelector.addGoal(6, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(7, new PanicGoal(this, 1.2));
+		this.goalSelector.addGoal(8, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
 	}
 
 	@Override
@@ -170,7 +180,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 6);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
 		return builder;
 	}
 
