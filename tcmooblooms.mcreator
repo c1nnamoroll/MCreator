@@ -65,20 +65,6 @@
       }
     },
     {
-      "name": "MoobloomEntityIsHurt",
-      "type": "procedure",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom_entity_is_hurt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityIsHurtProcedure.java"
-        ],
-        "dependencies": []
-      }
-    },
-    {
       "name": "Buttercups",
       "type": "particle",
       "compiles": true,
@@ -102,42 +88,8 @@
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
           "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
           "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
-        ]
-      }
-    },
-    {
-      "name": "BabyProcedure",
-      "type": "procedure",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_procedure",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyProcedureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
         ]
       }
     }

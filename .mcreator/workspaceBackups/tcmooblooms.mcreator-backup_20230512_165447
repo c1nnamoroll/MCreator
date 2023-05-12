@@ -1,0 +1,167 @@
+{
+  "mod_elements": [
+    {
+      "name": "Moobloom",
+      "type": "animatedentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
+        ]
+      }
+    },
+    {
+      "name": "MoobloomDrops",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/entities/moobloom.json"
+        ]
+      }
+    },
+    {
+      "name": "MoobloomEntityDies",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Buttercups",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buttercups",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
+          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloom",
+      "type": "animatedentity",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
+        ]
+      }
+    },
+    {
+      "name": "BabyProcedure",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_procedure",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyProcedureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.tcmooblooms.moobloom": "Moobloom",
+      "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
+      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "tcmooblooms",
+    "modName": "TCMooblooms",
+    "version": "1.0.0",
+    "author": "ginge, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.tcmooblooms",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}
