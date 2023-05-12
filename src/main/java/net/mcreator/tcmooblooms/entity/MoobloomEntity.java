@@ -1,60 +1,18 @@
 
 package net.mcreator.tcmooblooms.entity;
 
-import software.bernie.geckolib3.util.GeckoLibUtil;
-import software.bernie.geckolib3.core.manager.AnimationFactory;
-import software.bernie.geckolib3.core.manager.AnimationData;
-import software.bernie.geckolib3.core.event.predicate.AnimationEvent;
-import software.bernie.geckolib3.core.controller.AnimationController;
-import software.bernie.geckolib3.core.builder.ILoopType.EDefaultLoopTypes;
-import software.bernie.geckolib3.core.builder.AnimationBuilder;
-import software.bernie.geckolib3.core.PlayState;
-import software.bernie.geckolib3.core.IAnimatable;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-
-import net.minecraft.world.level.material.Material;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.ai.goal.TemptGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.PanicGoal;
-import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
-import net.minecraft.world.entity.ai.goal.FollowParentGoal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.goal.BreedGoal;
+import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.EntityDimensions;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.level.material.Material;
+import net.minecraft.nbt.Tag;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.syncher.SynchedEntityData;
-import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.Packet;
-import net.minecraft.core.BlockPos;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 
-import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
+import javax.annotation.Nullable;
 
-import java.util.List;
+import software.bernie.geckolib3.core.builder.ILoopType.EDefaultLoopTypes;
 
 public class MoobloomEntity extends Animal implements IAnimatable {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(MoobloomEntity.class, EntityDataSerializers.BOOLEAN);
@@ -74,6 +32,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		super(type, world);
 		xpReward = 3;
 		setNoAi(false);
+
 	}
 
 	@Override
@@ -105,6 +64,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
 		this.goalSelector.addGoal(2, new PanicGoal(this, 1.2));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
@@ -113,6 +73,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(7, new BreedGoal(this, 1));
 		this.goalSelector.addGoal(8, new FollowParentGoal(this, 0.8));
+
 	}
 
 	@Override
@@ -172,6 +133,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	public static void init() {
 		SpawnPlacements.register(TcmoobloomsModEntities.MOOBLOOM.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getBlockState(pos.below()).getMaterial() == Material.GRASS && world.getRawBrightness(pos, 0) > 8));
+
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -181,6 +143,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
+
 		return builder;
 	}
 
@@ -217,6 +180,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 			this.lastloop = false;
 			event.getController().setAnimation(new AnimationBuilder().addAnimation(this.animationprocedure, EDefaultLoopTypes.PLAY_ONCE));
 			event.getController().clearAnimationCache();
+
 			return PlayState.STOP;
 		}
 		if (!this.animationprocedure.equals("empty") && event.getController().getAnimationState().equals(software.bernie.geckolib3.core.AnimationState.Stopped)) {
@@ -240,6 +204,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		if (this.deathTime == 20) {
 			this.remove(MoobloomEntity.RemovalReason.KILLED);
 			this.dropExperience();
+
 		}
 	}
 
@@ -261,4 +226,5 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	public AnimationFactory getFactory() {
 		return this.factory;
 	}
+
 }

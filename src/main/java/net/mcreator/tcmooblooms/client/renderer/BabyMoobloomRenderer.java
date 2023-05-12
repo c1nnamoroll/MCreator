@@ -1,19 +1,6 @@
 
 package net.mcreator.tcmooblooms.client.renderer;
 
-import software.bernie.geckolib3.renderers.geo.GeoEntityRenderer;
-
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.MultiBufferSource;
-
-import net.mcreator.tcmooblooms.entity.model.BabyMoobloomModel;
-import net.mcreator.tcmooblooms.entity.BabyMoobloomEntity;
-
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 public class BabyMoobloomRenderer extends GeoEntityRenderer<BabyMoobloomEntity> {
 	public BabyMoobloomRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new BabyMoobloomModel());
@@ -25,4 +12,5 @@ public class BabyMoobloomRenderer extends GeoEntityRenderer<BabyMoobloomEntity> 
 		stack.scale(1f, 1f, 1f);
 		return RenderType.entityTranslucent(getTextureLocation(entity));
 	}
+
 }

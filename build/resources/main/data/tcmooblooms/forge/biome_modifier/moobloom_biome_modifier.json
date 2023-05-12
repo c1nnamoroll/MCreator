@@ -13,6 +13,6 @@
     "type": "tcmooblooms:moobloom",
     "weight": 7,
     "minCount": 2,
-    "maxCount": 2
+    "maxCount": 3
   }
 }
