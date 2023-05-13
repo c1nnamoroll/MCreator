@@ -6,7 +6,7 @@
     "pools": [
       {
         "minrolls": 1,
-        "maxrolls": 2,
+        "maxrolls": 1,
         "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
@@ -14,23 +14,9 @@
           {
             "type": "item",
             "item": {
-              "value": "Items.BEEF"
-            },
-            "weight": 65,
-            "minCount": 1,
-            "maxCount": 3,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": true,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "Items.LEATHER"
             },
-            "weight": 25,
+            "weight": 60,
             "minCount": 0,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -44,32 +30,9 @@
             "item": {
               "value": "Blocks.YELLOW_FLOWER"
             },
-            "weight": 10,
+            "weight": 40,
             "minCount": 0,
             "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": true,
-            "silkTouchMode": 0
-          }
-        ]
-      },
-      {
-        "minrolls": 1,
-        "maxrolls": 1,
-        "minbonusrolls": 1,
-        "maxbonusrolls": 1,
-        "hasbonusrolls": false,
-        "entries": [
-          {
-            "type": "item",
-            "item": {
-              "value": "Items.COOKED_BEEF"
-            },
-            "weight": 1,
-            "minCount": 1,
-            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,

@@ -6,7 +6,7 @@
 				"identifier": "geometry.unknown",
 				"texture_width": 64,
 				"texture_height": 32,
-				"visible_bounds_width": 2,
+				"visible_bounds_width": 3,
 				"visible_bounds_height": 2.5,
 				"visible_bounds_offset": [0, 0.75, 0]
 			},
@@ -108,10 +108,10 @@
 				},
 				{
 					"name": "leg0",
-					"pivot": [-0.5, 6, 0.5],
+					"pivot": [-2, 6, 3],
 					"cubes": [
 						{
-							"origin": [-3, 0, 2],
+							"origin": [-3, 0.00071, 1.93456],
 							"size": [2, 6, 2],
 							"uv": {
 								"north": {"uv": [4, 20], "uv_size": [4, 12]},
@@ -126,7 +126,7 @@
 				},
 				{
 					"name": "leg1",
-					"pivot": [3.5, 6, 0.5],
+					"pivot": [2, 6, 3],
 					"mirror": true,
 					"cubes": [
 						{
@@ -145,7 +145,7 @@
 				},
 				{
 					"name": "leg2",
-					"pivot": [-0.5, 6, -5.5],
+					"pivot": [-2, 6, -3.5],
 					"cubes": [
 						{
 							"origin": [-3, 0, -4.5],
@@ -163,7 +163,7 @@
 				},
 				{
 					"name": "leg3",
-					"pivot": [3.5, 6, -5.5],
+					"pivot": [2, 6, -3.5],
 					"mirror": true,
 					"cubes": [
 						{

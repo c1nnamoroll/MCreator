@@ -36,13 +36,13 @@ public class ButtercupsParticle extends TextureSheetParticle {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
-
-		this.lifetime = 20;
-		this.gravity = 0f;
+		this.quadSize *= 0.5f;
+		this.lifetime = 10;
+		this.gravity = 0.05f;
 		this.hasPhysics = true;
-		this.xd = vx * 1;
-		this.yd = vy * 1;
-		this.zd = vz * 1;
+		this.xd = vx * 0;
+		this.yd = vy * 0;
+		this.zd = vz * 0;
 		this.pickSprite(spriteSet);
 	}
 

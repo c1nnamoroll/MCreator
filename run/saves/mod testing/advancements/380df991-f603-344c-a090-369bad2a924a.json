@@ -1,4 +1,10 @@
 {
+  "minecraft:recipes/misc/sugar_from_honey_bottle": {
+    "criteria": {
+      "has_honey_bottle": "2023-05-13 18:34:42 -0400"
+    },
+    "done": true
+  },
   "minecraft:recipes/food/bread": {
     "criteria": {
       "has_wheat": "2023-05-11 18:24:12 -0400"
@@ -74,6 +80,12 @@
   "minecraft:recipes/misc/leather_horse_armor": {
     "criteria": {
       "has_leather": "2023-05-11 19:27:03 -0400"
+    },
+    "done": true
+  },
+  "minecraft:recipes/redstone/honey_block": {
+    "criteria": {
+      "has_honey_bottle": "2023-05-13 18:34:42 -0400"
     },
     "done": true
   },

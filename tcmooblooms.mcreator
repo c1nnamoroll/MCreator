@@ -1,25 +1,9 @@
 {
   "mod_elements": [
     {
-      "name": "Moobloom",
-      "type": "animatedentity",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
-          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
-        ]
-      }
-    },
-    {
       "name": "MoobloomDrops",
       "type": "loottable",
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moobloom_drops",
@@ -65,15 +49,19 @@
       }
     },
     {
-      "name": "Buttercups",
-      "type": "particle",
+      "name": "Moobloom",
+      "type": "animatedentity",
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "buttercups",
+      "registry_name": "moobloom",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
-          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
         ]
       }
     },
@@ -90,6 +78,85 @@
           "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
           "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
           "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
+        ]
+      }
+    },
+    {
+      "name": "MoobloomOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Buttercups",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buttercups",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
+          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
+        ]
+      }
+    },
+    {
+      "name": "MoobloomHoney",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_honey",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomHoneyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       }
     }

@@ -26,11 +26,11 @@ public class TcmoobloomsModEntities {
 	public static final RegistryObject<EntityType<BabyMoobloomEntity>> BABY_MOOBLOOM = register("baby_moobloom",
 			EntityType.Builder.<BabyMoobloomEntity>of(BabyMoobloomEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyMoobloomEntity::new)
 
-					.sized(0.7f, 0.45f));
+					.sized(0.45f, 0.7f));
 	public static final RegistryObject<EntityType<MoobloomEntity>> MOOBLOOM = register("moobloom",
 			EntityType.Builder.<MoobloomEntity>of(MoobloomEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MoobloomEntity::new)
 
-					.sized(0.9f, 1.4000000000000001f));
+					.sized(1.4000000000000001f, 0.9f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -11,7 +11,7 @@
   ],
   "spawners": {
     "type": "tcmooblooms:baby_moobloom",
-    "weight": 2,
+    "weight": 20,
     "minCount": 1,
     "maxCount": 1
   }

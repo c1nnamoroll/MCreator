@@ -90,11 +90,6 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
-	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
-		return 0.1F;
-	}
-
-	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
@@ -104,8 +99,8 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
 		this.goalSelector.addGoal(2, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(4, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
 		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
@@ -166,7 +161,7 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}
 
@@ -178,15 +173,15 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Walk", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
-			if (this.isDeadOrDying()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.PLAY_ONCE));
-				return PlayState.CONTINUE;
-			}
-			if (this.isSprinting()) {
+			if (this.isShiftKeyDown()) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Idle", EDefaultLoopTypes.LOOP));
+			if (this.isSprinting()) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Sprint", EDefaultLoopTypes.LOOP));
+				return PlayState.CONTINUE;
+			}
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.idle", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;

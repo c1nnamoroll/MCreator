@@ -22,13 +22,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.ai.goal.TemptGoal;
 import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
-import net.minecraft.world.entity.ai.goal.FollowParentGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -43,6 +43,8 @@ import net.minecraft.world.entity.EntityDimensions;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -52,6 +54,8 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.tcmooblooms.procedures.MoobloomOnEntityTickUpdateProcedure;
+import net.mcreator.tcmooblooms.procedures.MoobloomHoneyProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -93,11 +97,6 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
-	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
-		return 0.1F;
-	}
-
-	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
@@ -112,7 +111,6 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		this.goalSelector.addGoal(5, new FloatGoal(this));
 		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
 		this.goalSelector.addGoal(7, new BreedGoal(this, 1));
-		this.goalSelector.addGoal(8, new FollowParentGoal(this, 0.8));
 	}
 
 	@Override
@@ -141,8 +139,24 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
+	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
+		ItemStack itemstack = sourceentity.getItemInHand(hand);
+		InteractionResult retval = InteractionResult.sidedSuccess(this.level.isClientSide());
+		super.mobInteract(sourceentity, hand);
+		double x = this.getX();
+		double y = this.getY();
+		double z = this.getZ();
+		Entity entity = this;
+		Level world = this.level;
+
+		MoobloomHoneyProcedure.execute(world, x, y, z, sourceentity);
+		return retval;
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
+		MoobloomOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
 		this.refreshDimensions();
 	}
 
@@ -180,7 +194,7 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 		builder = builder.add(Attributes.MAX_HEALTH, 10);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 0);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 20);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
 		return builder;
 	}
 
@@ -192,12 +206,8 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.Moobloom.Walk", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
-			if (this.isDeadOrDying()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.PLAY_ONCE));
-				return PlayState.CONTINUE;
-			}
 			if (this.isSprinting()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.LOOP));
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.Moobloom.Sprint", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.Moobloom.Idle", EDefaultLoopTypes.LOOP));
