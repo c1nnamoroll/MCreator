@@ -49,6 +49,7 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 
+import net.mcreator.tcmooblooms.procedures.BabyMoobloomOnEntityTickUpdateProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -97,9 +98,9 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
-		this.goalSelector.addGoal(2, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(3, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(1, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
+		this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
 		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(6, new FloatGoal(this));
@@ -124,6 +125,7 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		BabyMoobloomOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -173,15 +175,15 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Walk", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
-			if (this.isShiftKeyDown()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.LOOP));
+			if (this.isDeadOrDying()) {
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.PLAY_ONCE));
 				return PlayState.CONTINUE;
 			}
 			if (this.isSprinting()) {
 				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Sprint", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
-			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.idle", EDefaultLoopTypes.LOOP));
+			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Idle", EDefaultLoopTypes.LOOP));
 			return PlayState.CONTINUE;
 		}
 		return PlayState.STOP;

@@ -66,22 +66,6 @@
       }
     },
     {
-      "name": "BabyMoobloom",
-      "type": "animatedentity",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_moobloom",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
-        ]
-      }
-    },
-    {
       "name": "MoobloomOnEntityTickUpdate",
       "type": "procedure",
       "sortid": 5,
@@ -161,20 +145,201 @@
       }
     },
     {
-      "name": "MoobloomStep",
+      "name": "MoobloomBreeding",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "moobloom_step",
+      "registry_name": "moobloom_breeding",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomStepProcedure.java"
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomBreedingProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloomAge",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloom",
+      "type": "animatedentity",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java"
+        ]
+      }
+    },
+    {
+      "name": "MoobloomTrail",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_trail",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomTrailProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloomOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloomDrops",
+      "type": "loottable",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/entities/babymoobloom.json"
+        ]
+      }
+    },
+    {
+      "name": "BabyMoobloomEntityDies",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           },
           {
             "name": "world",
@@ -196,7 +361,12 @@
   },
   "foldersRoot": {
     "name": "~",
-    "children": []
+    "children": [
+      {
+        "name": "BabyMoobloomSounds",
+        "children": []
+      }
+    ]
   },
   "workspaceSettings": {
     "modid": "tcmooblooms",

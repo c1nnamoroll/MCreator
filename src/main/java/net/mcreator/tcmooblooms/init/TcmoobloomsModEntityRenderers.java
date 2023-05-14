@@ -16,7 +16,7 @@ import net.mcreator.tcmooblooms.client.renderer.BabyMoobloomRenderer;
 public class TcmoobloomsModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(TcmoobloomsModEntities.BABY_MOOBLOOM.get(), BabyMoobloomRenderer::new);
 		event.registerEntityRenderer(TcmoobloomsModEntities.MOOBLOOM.get(), MoobloomRenderer::new);
+		event.registerEntityRenderer(TcmoobloomsModEntities.BABY_MOOBLOOM.get(), BabyMoobloomRenderer::new);
 	}
 }
