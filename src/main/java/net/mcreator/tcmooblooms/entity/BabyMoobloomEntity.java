@@ -49,8 +49,6 @@ import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 
-import net.mcreator.tcmooblooms.procedures.BabyMoobloomOnEntityTickUpdateProcedure;
-import net.mcreator.tcmooblooms.procedures.BabyMoobloomEntityIsHurtProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -92,6 +90,11 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
+	protected float getStandingEyeHeight(Pose poseIn, EntityDimensions sizeIn) {
+		return 0.5F;
+	}
+
+	@Override
 	public Packet<?> getAddEntityPacket() {
 		return NetworkHooks.getEntitySpawningPacket(this);
 	}
@@ -101,11 +104,12 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new FollowParentGoal(this, 0.8));
 		this.goalSelector.addGoal(2, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
-		this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(6, new FloatGoal(this));
-		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(5, new FloatGoal(this));
+		this.goalSelector.addGoal(6, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(7, new FollowParentGoal(this, 0.8));
+		this.goalSelector.addGoal(8, new PanicGoal(this, 1.2));
 	}
 
 	@Override
@@ -124,15 +128,8 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
-	public boolean hurt(DamageSource source, float amount) {
-		BabyMoobloomEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
-		return super.hurt(source, amount);
-	}
-
-	@Override
 	public void baseTick() {
 		super.baseTick();
-		BabyMoobloomOnEntityTickUpdateProcedure.execute(this.level, this);
 		this.refreshDimensions();
 	}
 
@@ -187,7 +184,7 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 				return PlayState.CONTINUE;
 			}
 			if (this.isSprinting()) {
-				event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Sprint", EDefaultLoopTypes.LOOP));
+				event.getController().setAnimation(new AnimationBuilder().addAnimation("", EDefaultLoopTypes.LOOP));
 				return PlayState.CONTINUE;
 			}
 			event.getController().setAnimation(new AnimationBuilder().addAnimation("animation.BabyMoobloom.Idle", EDefaultLoopTypes.LOOP));

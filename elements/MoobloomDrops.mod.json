@@ -6,7 +6,7 @@
     "pools": [
       {
         "minrolls": 1,
-        "maxrolls": 1,
+        "maxrolls": 2,
         "minbonusrolls": 1,
         "maxbonusrolls": 1,
         "hasbonusrolls": false,
@@ -16,7 +16,7 @@
             "item": {
               "value": "Items.LEATHER"
             },
-            "weight": 60,
+            "weight": 75,
             "minCount": 0,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -30,13 +30,13 @@
             "item": {
               "value": "Blocks.YELLOW_FLOWER"
             },
-            "weight": 40,
+            "weight": 25,
             "minCount": 0,
             "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
-            "explosionDecay": true,
+            "explosionDecay": false,
             "silkTouchMode": 0
           }
         ]

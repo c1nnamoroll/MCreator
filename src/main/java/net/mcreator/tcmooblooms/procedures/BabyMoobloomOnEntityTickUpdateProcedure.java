@@ -37,12 +37,12 @@ public class BabyMoobloomOnEntityTickUpdateProcedure {
 			final Vec3 _center = new Vec3((entity.getX()), (entity.getY()), (entity.getZ()));
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(6 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).collect(Collectors.toList());
 			for (Entity entityiterator : _entfound) {
-				if (!entity.getPersistentData().getBoolean("FollowParentGoal")) {
-					entity.getPersistentData().putBoolean("FollowParentGoal", (true));
+				if (!entity.getPersistentData().getBoolean("follow")) {
+					entity.getPersistentData().putBoolean("follow", (true));
 					if (entity instanceof Mob _entity)
 						_entity.getNavigation().moveTo((entity.getX()), (entity.getY()), (entity.getZ()), 0.8);
 					TcmoobloomsMod.queueServerWork(60, () -> {
-						entity.getPersistentData().putBoolean("FollowParentGoal", (false));
+						entity.getPersistentData().putBoolean("follow", (false));
 					});
 				}
 			}
