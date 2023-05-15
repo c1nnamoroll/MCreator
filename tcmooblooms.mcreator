@@ -282,18 +282,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -421,42 +409,6 @@
       "path": "~/BabyMoobloomSounds"
     },
     {
-      "name": "BabyMoobloomHurt",
-      "type": "procedure",
-      "sortid": 19,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_moobloom_hurt",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomHurtProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/BabyMoobloomSounds"
-    },
-    {
       "name": "BabyMoobloomDeath",
       "type": "procedure",
       "sortid": 20,
@@ -491,6 +443,37 @@
         ]
       },
       "path": "~/BabyMoobloomSounds"
+    },
+    {
+      "name": "BabyMoobloomEntityIsHurt",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],

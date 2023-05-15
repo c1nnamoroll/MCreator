@@ -35,12 +35,12 @@ public class BabyMoobloomStepProcedure {
 			return;
 		if (entity instanceof BabyMoobloomEntity) {
 			if (entity.getDeltaMovement().x() > 0 && entity.getDeltaMovement().z() > 0) {
-				if (Math.random() > 1) {
+				if (Math.random() > 0.5) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1.3, 1.7));
+							_level.playSound(null, new BlockPos(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), SoundSource.NEUTRAL, (float) 0.15, (float) Mth.nextDouble(RandomSource.create(), 1.3, 1.7));
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), SoundSource.NEUTRAL, 1, (float) Mth.nextDouble(RandomSource.create(), 1.3, 1.7), false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.step")), SoundSource.NEUTRAL, (float) 0.15, (float) Mth.nextDouble(RandomSource.create(), 1.3, 1.7), false);
 						}
 					}
 				}

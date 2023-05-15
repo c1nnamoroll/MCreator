@@ -50,6 +50,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.Packet;
 
 import net.mcreator.tcmooblooms.procedures.BabyMoobloomOnEntityTickUpdateProcedure;
+import net.mcreator.tcmooblooms.procedures.BabyMoobloomEntityIsHurtProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -123,9 +124,15 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
+	public boolean hurt(DamageSource source, float amount) {
+		BabyMoobloomEntityIsHurtProcedure.execute(this.level, this.getX(), this.getY(), this.getZ());
+		return super.hurt(source, amount);
+	}
+
+	@Override
 	public void baseTick() {
 		super.baseTick();
-		BabyMoobloomOnEntityTickUpdateProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		BabyMoobloomOnEntityTickUpdateProcedure.execute(this.level, this);
 		this.refreshDimensions();
 	}
 
