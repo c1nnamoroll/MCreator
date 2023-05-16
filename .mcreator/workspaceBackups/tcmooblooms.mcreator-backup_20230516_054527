@@ -180,25 +180,6 @@
       }
     },
     {
-      "name": "BabyTexture",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_texture",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyTextureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "BeeHypno",
       "type": "potioneffect",
       "compiles": true,
@@ -209,26 +190,6 @@
           "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoMobEffect.java"
         ]
       }
-    },
-    {
-      "name": "MoobloomEntityVisualScale",
-      "type": "procedure",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom_entity_visual_scale",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityVisualScaleProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
     }
   ],
   "variable_elements": [],
@@ -236,7 +197,8 @@
   "language_map": {
     "en_us": {
       "entity.tcmooblooms.moobloom": "Moobloom",
-      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg"
+      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "effect.tcmooblooms.bee_hypno": "Bee Hypnotize"
     }
   },
   "foldersRoot": {

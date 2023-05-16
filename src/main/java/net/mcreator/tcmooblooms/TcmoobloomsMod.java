@@ -32,6 +32,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
 import net.mcreator.tcmooblooms.init.TcmoobloomsModParticleTypes;
+import net.mcreator.tcmooblooms.init.TcmoobloomsModMobEffects;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModItems;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
@@ -56,6 +57,8 @@ public class TcmoobloomsMod {
 
 		TcmoobloomsModItems.REGISTRY.register(bus);
 		TcmoobloomsModEntities.REGISTRY.register(bus);
+
+		TcmoobloomsModMobEffects.REGISTRY.register(bus);
 
 		TcmoobloomsModParticleTypes.REGISTRY.register(bus);
 
