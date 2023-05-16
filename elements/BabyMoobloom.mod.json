@@ -12,8 +12,8 @@
     "boundingBoxScale": {
       "fixedValue": 1.0
     },
-    "modelWidth": 0.45,
-    "modelHeight": 0.7,
+    "modelWidth": 0.9,
+    "modelHeight": 0.45,
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": false,
@@ -99,19 +99,13 @@
     "stepSound": {
       "value": ""
     },
-    "whenMobIsHurt": {
-      "name": "BabyMoobloomEntityIsHurt"
-    },
-    "onMobTickUpdate": {
-      "name": "BabyMoobloomOnEntityTickUpdate"
-    },
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"-82\" y=\"25\"><next><block type=\"follow_parent\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"follow_parent\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "babymoobloom.geo.json",
     "groupName": "head",
     "animation1": "animation.BabyMoobloom.Idle",
-    "animation2": "animation.BabyMoobloom.Walk",
+    "animation2": "animation.BabyMoobloom.Sprint",
     "animation3": "",
     "animation4": "",
     "animation5": "",
@@ -129,7 +123,7 @@
     "enable8": false,
     "enable9": false,
     "enable10": false,
-    "breedable": true,
+    "breedable": false,
     "tameable": false,
     "disableDeathRotation": false,
     "headMovement": true,
@@ -149,29 +143,7 @@
     "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 1,
     "maxNumberOfMobsPerGroup": 1,
-    "restrictionBiomes": [
-      {
-        "value": "meadow"
-      },
-      {
-        "value": "plains"
-      },
-      {
-        "value": "mutated_plains"
-      },
-      {
-        "value": "mutated_forest"
-      },
-      {
-        "value": "forest"
-      },
-      {
-        "value": "birch_forest"
-      },
-      {
-        "value": "mutated_birch_forest"
-      }
-    ],
+    "restrictionBiomes": [],
     "spawnInDungeons": false
   }
 }

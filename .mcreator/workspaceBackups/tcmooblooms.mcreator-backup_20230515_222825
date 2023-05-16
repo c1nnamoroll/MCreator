@@ -421,21 +421,17 @@
       "path": "~/BabyMoobloomSounds"
     },
     {
-      "name": "BabyMoobloomHurt",
+      "name": "BabyMoobloomEntityIsHurt",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "baby_moobloom_hurt",
+      "registry_name": "baby_moobloom_entity_is_hurt",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomHurtProcedure.java"
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomEntityIsHurtProcedure.java"
         ],
         "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
           {
             "name": "x",
             "type": "number"
@@ -453,44 +449,19 @@
             "type": "world"
           }
         ]
-      },
-      "path": "~/BabyMoobloomSounds"
+      }
     },
     {
-      "name": "BabyMoobloomDeath",
-      "type": "procedure",
-      "sortid": 20,
+      "name": "BeeHypno",
+      "type": "potioneffect",
       "compiles": true,
       "locked_code": false,
-      "registry_name": "baby_moobloom_death",
+      "registry_name": "bee_hypno",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomDeathProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
+          "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoMobEffect.java"
         ]
-      },
-      "path": "~/BabyMoobloomSounds"
+      }
     }
   ],
   "variable_elements": [],
@@ -500,6 +471,7 @@
       "entity.tcmooblooms.moobloom": "Moobloom",
       "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
       "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
       "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
     }
   },

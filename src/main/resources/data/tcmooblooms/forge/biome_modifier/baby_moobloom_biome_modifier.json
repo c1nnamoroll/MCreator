@@ -1,14 +1,8 @@
 {
   "type": "forge:add_spawns",
-  "biomes": [
-    "old_growth_birch_forest",
-    "forest",
-    "sunflower_plains",
-    "plains",
-    "flower_forest",
-    "birch_forest",
-    "meadow"
-  ],
+  "biomes": {
+    "type": "forge:any"
+  },
   "spawners": {
     "type": "tcmooblooms:baby_moobloom",
     "weight": 4,
