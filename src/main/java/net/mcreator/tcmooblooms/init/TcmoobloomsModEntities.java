@@ -17,7 +17,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import net.mcreator.tcmooblooms.entity.MoobloomEntity;
-import net.mcreator.tcmooblooms.entity.BabyMoobloomEntity;
 import net.mcreator.tcmooblooms.TcmoobloomsMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -27,10 +26,6 @@ public class TcmoobloomsModEntities {
 			EntityType.Builder.<MoobloomEntity>of(MoobloomEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MoobloomEntity::new)
 
 					.sized(0.9f, 1.4000000000000001f));
-	public static final RegistryObject<EntityType<BabyMoobloomEntity>> BABY_MOOBLOOM = register("baby_moobloom",
-			EntityType.Builder.<BabyMoobloomEntity>of(BabyMoobloomEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyMoobloomEntity::new)
-
-					.sized(0.9f, 0.45f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -40,13 +35,11 @@ public class TcmoobloomsModEntities {
 	public static void init(FMLCommonSetupEvent event) {
 		event.enqueueWork(() -> {
 			MoobloomEntity.init();
-			BabyMoobloomEntity.init();
 		});
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(MOOBLOOM.get(), MoobloomEntity.createAttributes().build());
-		event.put(BABY_MOOBLOOM.get(), BabyMoobloomEntity.createAttributes().build());
 	}
 }

@@ -7,11 +7,9 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.BlockPos;
-
-import net.mcreator.tcmooblooms.entity.MoobloomEntity;
-import net.mcreator.tcmooblooms.entity.BabyMoobloomEntity;
 
 import javax.annotation.Nullable;
 
@@ -29,7 +27,7 @@ public class MoobloomTrailProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof MoobloomEntity && !(entity instanceof BabyMoobloomEntity)) {
+		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
 			if (entity.getDeltaMovement().x() > 0 && entity.getDeltaMovement().z() > 0) {
 				if (Math.random() < 0.008) {
 					world.setBlock(new BlockPos(x, y, z), Blocks.DANDELION.defaultBlockState(), 3);
