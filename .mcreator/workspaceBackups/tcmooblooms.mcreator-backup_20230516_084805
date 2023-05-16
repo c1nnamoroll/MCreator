@@ -58,10 +58,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java",
-          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
           "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java"
+          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
         ]
       }
     },
@@ -175,26 +175,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "MoobloomEntityVisualScale",
-      "type": "procedure",
-      "sortid": 14,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moobloom_entity_visual_scale",
-      "metadata": {
-        "return_type": "number",
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityVisualScaleProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       }
