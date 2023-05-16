@@ -2,6 +2,7 @@ Java Launcher: /Applications/MCreator.app/Contents/MacOS/jdk/Contents/Home/bin/j
 Arguments: '--in-jar, /Users/treasure89238/Desktop/mods/MCreator/build/libs/modid-1.0.jar, --out-jar, /Users/treasure89238/Desktop/mods/MCreator/build/reobfJar/output.jar, --srg-in, /Users/treasure89238/Desktop/mods/MCreator/build/createMcpToSrg/output.tsrg, --live'
 Classpath:
  - /Users/treasure89238/.mcreator/gradle/caches/forge_gradle/maven_downloader/net/md-5/SpecialSource/1.11.0/SpecialSource-1.11.0-shaded.jar
+ - /Users/treasure89238/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/curse/maven/kleidersplayerrenderer-682065/4475620_mapped_official_1.19.2/kleidersplayerrenderer-682065-4475620_mapped_official_1.19.2.jar
  - /Users/treasure89238/.mcreator/gradle/caches/forge_gradle/deobf_dependencies/software/bernie/geckolib/geckolib-forge-1.19/3.1.40_mapped_official_1.19.2/geckolib-forge-1.19-3.1.40_mapped_official_1.19.2.jar
  - /Users/treasure89238/.mcreator/gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.19.2-43.2.0_mapped_official_1.19.2/forge-1.19.2-43.2.0_mapped_official_1.19.2-recomp.jar
  - /Users/treasure89238/.mcreator/gradle/caches/forge_gradle/minecraft_repo/versions/1.19.2/client-extra.jar
@@ -120,14 +121,14 @@ Loading mappings... 40%
 Loading mappings... 50%
 0 packages, 6859 classes, 30693 fields, 57911 methods
 Remapping final jar
-Remapping jar...  2%
+Remapping jar...  1%
 Remapping jar... 11%
 Remapping jar... 21%
-Remapping jar... 30%
+Remapping jar... 31%
 Remapping jar... 41%
 Remapping jar... 51%
-Remapping jar... 60%
-Remapping jar... 71%
-Remapping jar... 81%
+Remapping jar... 61%
+Remapping jar... 70%
+Remapping jar... 80%
 Remapping jar... 90%
 Remapping jar... 100%

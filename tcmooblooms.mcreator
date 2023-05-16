@@ -58,10 +58,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java",
           "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java"
         ]
       }
     },
@@ -77,6 +77,10 @@
           "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomOnEntityTickUpdateProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"
@@ -104,8 +108,8 @@
       "registry_name": "buttercups",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
-          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
+          "src/main/resources/assets/tcmooblooms/particles/buttercups.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java"
         ]
       }
     },
@@ -121,6 +125,10 @@
           "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomHoneyProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "sourceentity",
             "type": "entity"
@@ -229,6 +237,25 @@
           }
         ]
       }
+    },
+    {
+      "name": "BabyMoobloomTexture",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_texture",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomTextureProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -236,7 +263,8 @@
   "language_map": {
     "en_us": {
       "entity.tcmooblooms.moobloom": "Moobloom",
-      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg"
+      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "effect.tcmooblooms.bee_hypno": "Bee Hypnotize"
     }
   },
   "foldersRoot": {
@@ -256,6 +284,7 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "geckolib"
     ],
     "currentGenerator": "forge-1.19.2",

@@ -1,8 +1,10 @@
 
 package net.mcreator.tcmooblooms.potion;
 
-public class BeeHypnoMobEffect extends MobEffect {
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffect;
 
+public class BeeHypnoMobEffect extends MobEffect {
 	public BeeHypnoMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -52);
 	}
@@ -16,5 +18,4 @@ public class BeeHypnoMobEffect extends MobEffect {
 	public boolean isDurationEffectTick(int duration, int amplifier) {
 		return true;
 	}
-
 }

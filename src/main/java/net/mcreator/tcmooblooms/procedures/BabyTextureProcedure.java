@@ -1,8 +1,9 @@
 package net.mcreator.tcmooblooms.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
-import javax.annotation.Nullable;
+import net.mcreator.tcmooblooms.entity.MoobloomEntity;
 
 public class BabyTextureProcedure {
 	public static void execute(Entity entity) {

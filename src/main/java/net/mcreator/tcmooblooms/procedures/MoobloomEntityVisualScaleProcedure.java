@@ -1,8 +1,7 @@
 package net.mcreator.tcmooblooms.procedures;
 
-import net.minecraftforge.eventbus.api.Event;
-
-import javax.annotation.Nullable;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Entity;
 
 public class MoobloomEntityVisualScaleProcedure {
 	public static double execute(Entity entity) {
