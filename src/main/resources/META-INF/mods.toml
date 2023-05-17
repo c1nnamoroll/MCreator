@@ -20,12 +20,6 @@ authors="ginge, MCreator"
 
 
 [[dependencies.tcmooblooms]]
-    modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.tcmooblooms]]
     modId="geckolib"
     mandatory=false
     versionRange="[0,)"

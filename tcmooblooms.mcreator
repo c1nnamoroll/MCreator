@@ -58,10 +58,10 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java",
-          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
           "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java"
+          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java"
         ]
       }
     },
@@ -108,8 +108,8 @@
       "registry_name": "buttercups",
       "metadata": {
         "files": [
-          "src/main/resources/assets/tcmooblooms/particles/buttercups.json",
-          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java"
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
+          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
         ]
       }
     },
@@ -188,25 +188,6 @@
       }
     },
     {
-      "name": "BabyTexture",
-      "type": "procedure",
-      "sortid": 15,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "baby_texture",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyTextureProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "BeeHypno",
       "type": "potioneffect",
       "compiles": true,
@@ -239,20 +220,32 @@
       }
     },
     {
-      "name": "BabyMoobloomTexture",
+      "name": "BeeHypnoOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "baby_moobloom_texture",
+      "registry_name": "bee_hypno_on_effect_active_tick",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomTextureProcedure.java"
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoOnEffectActiveTickProcedure.java"
         ],
         "dependencies": [
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
           }
         ]
       }
@@ -284,7 +277,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "geckolib"
     ],
     "currentGenerator": "forge-1.19.2",
