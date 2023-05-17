@@ -12,6 +12,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.LivingEntity;
@@ -39,7 +40,7 @@ public class MoobloomEntityDiesProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) && !(entity instanceof Bee)) {
+		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) && !(entity instanceof Bee) && !(entity instanceof Player)) {
 			if (world instanceof ServerLevel _level)
 				_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 						"loot spawn ~ ~ ~ loot tcmooblooms:entities/moobloom");

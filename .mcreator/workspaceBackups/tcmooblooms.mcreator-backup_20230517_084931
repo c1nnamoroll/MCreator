@@ -218,6 +218,20 @@
           }
         ]
       }
+    },
+    {
+      "name": "BeeHypnoOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [],

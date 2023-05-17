@@ -19,9 +19,7 @@ public class BeeHypnoMobEffect extends MobEffect {
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		BeeHypnoOnEffectActiveTickProcedure.execute(
-
-		);
+		BeeHypnoOnEffectActiveTickProcedure.execute(entity.level, entity);
 	}
 
 	@Override
