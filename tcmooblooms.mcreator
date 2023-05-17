@@ -230,24 +230,7 @@
         "files": [
           "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoOnEffectActiveTickProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          }
-        ]
+        "dependencies": []
       }
     }
   ],

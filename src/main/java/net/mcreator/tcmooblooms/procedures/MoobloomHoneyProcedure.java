@@ -12,6 +12,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.animal.Bee;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
@@ -36,7 +37,7 @@ public class MoobloomHoneyProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
-		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false)) {
+		if (!(entity instanceof LivingEntity _livEnt ? _livEnt.isBaby() : false) && !(entity instanceof Bee)) {
 			if ((sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.GLASS_BOTTLE) {
 				if (sourceentity instanceof Player _player) {
 					ItemStack _stktoremove = new ItemStack(Items.GLASS_BOTTLE);
