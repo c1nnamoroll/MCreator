@@ -190,6 +190,7 @@
     {
       "name": "BeeHypno",
       "type": "potioneffect",
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bee_hypno",
@@ -220,9 +221,41 @@
       }
     },
     {
+      "name": "BeeHypnoImmunity",
+      "type": "potioneffect",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_immunity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoImmunityMobEffect.java"
+        ]
+      }
+    },
+    {
+      "name": "BeeHypnoEffectExpires",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
       "name": "BeeHypnoOnEffectActiveTick",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bee_hypno_on_effect_active_tick",
@@ -234,10 +267,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       }
@@ -249,6 +278,7 @@
     "en_us": {
       "entity.tcmooblooms.moobloom": "Moobloom",
       "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
       "effect.tcmooblooms.bee_hypno": "Bee Hypnotize"
     }
   },

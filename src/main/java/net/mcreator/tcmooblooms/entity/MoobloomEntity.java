@@ -57,6 +57,7 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.tcmooblooms.procedures.MoobloomOnEntityTickUpdateProcedure;
 import net.mcreator.tcmooblooms.procedures.MoobloomHoneyProcedure;
+import net.mcreator.tcmooblooms.procedures.MoobloomEntityDiesProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -138,6 +139,12 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	@Override
 	public SoundEvent getDeathSound() {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.cow.death"));
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		MoobloomEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
