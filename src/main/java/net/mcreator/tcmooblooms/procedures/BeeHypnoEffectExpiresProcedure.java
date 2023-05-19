@@ -11,6 +11,6 @@ public class BeeHypnoEffectExpiresProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity)
-			_entity.addEffect(new MobEffectInstance(TcmoobloomsModMobEffects.BEE_HYPNO_IMMUNITY.get(), (int) (30 * 60), 1, (false), (true)));
+			_entity.addEffect(new MobEffectInstance(TcmoobloomsModMobEffects.BEE_HYPNO_IMMUNITY.get(), (int) (30 * 120), 1, (false), (true)));
 	}
 }

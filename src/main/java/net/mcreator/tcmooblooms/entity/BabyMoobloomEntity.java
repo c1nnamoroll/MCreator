@@ -113,6 +113,11 @@ public class BabyMoobloomEntity extends Animal implements IAnimatable {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("tcmooblooms:babyidlesounds"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation(""));
 	}

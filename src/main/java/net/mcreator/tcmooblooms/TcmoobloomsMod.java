@@ -31,6 +31,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.FriendlyByteBuf;
 
+import net.mcreator.tcmooblooms.init.TcmoobloomsModSounds;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModParticleTypes;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModMobEffects;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModItems;
@@ -54,6 +55,7 @@ public class TcmoobloomsMod {
 		MinecraftForge.EVENT_BUS.register(this);
 
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
+		TcmoobloomsModSounds.REGISTRY.register(bus);
 
 		TcmoobloomsModItems.REGISTRY.register(bus);
 		TcmoobloomsModEntities.REGISTRY.register(bus);

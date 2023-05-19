@@ -450,42 +450,6 @@
       "path": "~/Moobloom/Baby Moobloom"
     },
     {
-      "name": "IdleSound",
-      "type": "procedure",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "idle_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/IdleSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Moobloom/Baby Moobloom"
-    },
-    {
       "name": "BabyMoobloomEntityIsHurt",
       "type": "procedure",
       "sortid": 27,
@@ -557,7 +521,7 @@
   "variable_elements": [],
   "sound_elements": [
     {
-      "name": "babymoobloomidle",
+      "name": "babyidlesounds",
       "files": [
         "babysay1",
         "babysay2",
@@ -565,7 +529,7 @@
         "babysay4"
       ],
       "category": "neutral",
-      "subtitle": ""
+      "subtitle": "Baby Moobloom Idle"
     }
   ],
   "language_map": {
@@ -576,6 +540,7 @@
       "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
       "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
       "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
+      "subtitles.babyidlesounds": "Baby Moobloom Idle",
       "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
     }
   },

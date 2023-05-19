@@ -88,7 +88,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:babyidlesounds"
     },
     "hurtSound": {
       "value": ""
