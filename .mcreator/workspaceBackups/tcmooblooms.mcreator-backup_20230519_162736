@@ -450,42 +450,6 @@
       "path": "~/Moobloom/Baby Moobloom"
     },
     {
-      "name": "IdleSound",
-      "type": "procedure",
-      "sortid": 26,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "idle_sound",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/tcmooblooms/procedures/IdleSoundProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Moobloom/Baby Moobloom"
-    },
-    {
       "name": "BabyMoobloomEntityIsHurt",
       "type": "procedure",
       "sortid": 27,

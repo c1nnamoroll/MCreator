@@ -519,7 +519,19 @@
     }
   ],
   "variable_elements": [],
-  "sound_elements": [],
+  "sound_elements": [
+    {
+      "name": "babyidlesounds",
+      "files": [
+        "babysay1",
+        "babysay2",
+        "babysay3",
+        "babysay4"
+      ],
+      "category": "neutral",
+      "subtitle": "Baby Moobloom Idle"
+    }
+  ],
   "language_map": {
     "en_us": {
       "entity.tcmooblooms.moobloom": "Moobloom",

@@ -34,7 +34,7 @@ public class MoobloomOnEntityTickUpdateProcedure {
 				if (entityiterator instanceof Bee && !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(TcmoobloomsModMobEffects.BEE_HYPNO.get()) : false)
 						&& !(entityiterator instanceof LivingEntity _livEnt ? _livEnt.hasEffect(TcmoobloomsModMobEffects.BEE_HYPNO_IMMUNITY.get()) : false)) {
 					if (entityiterator instanceof LivingEntity _entity)
-						_entity.addEffect(new MobEffectInstance(TcmoobloomsModMobEffects.BEE_HYPNO.get(), (int) (30 * 60), 1, (false), (true)));
+						_entity.addEffect(new MobEffectInstance(TcmoobloomsModMobEffects.BEE_HYPNO.get(), (int) (30 * 30), 1, (false), (true)));
 				}
 			}
 		}
