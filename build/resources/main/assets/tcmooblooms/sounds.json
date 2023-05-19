@@ -1,0 +1,23 @@
+{
+  "babymoobloomidle": {
+    "category": "neutral",
+    "sounds": [
+      {
+        "name": "tcmooblooms:babysay1",
+        "stream": false
+      },
+      {
+        "name": "tcmooblooms:babysay2",
+        "stream": false
+      },
+      {
+        "name": "tcmooblooms:babysay3",
+        "stream": false
+      },
+      {
+        "name": "tcmooblooms:babysay4",
+        "stream": false
+      }
+    ]
+  }
+}

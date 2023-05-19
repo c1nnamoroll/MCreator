@@ -1,0 +1,540 @@
+{
+  "mod_elements": [
+    {
+      "name": "MoobloomDrops",
+      "type": "loottable",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/entities/moobloom.json"
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "MoobloomEntityDies",
+      "type": "procedure",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "Moobloom",
+      "type": "animatedentity",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moobloom_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoobloomRenderer.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoobloomModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoobloomEntity.java",
+          "src/main/resources/assets/tcmooblooms/models/item/moobloom_spawn_egg.json"
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "MoobloomOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "Buttercups",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "buttercups",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/ButtercupsParticle.java",
+          "src/main/resources/assets/tcmooblooms/particles/buttercups.json"
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "MoobloomHoney",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_honey",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomHoneyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "MoobloomTrail",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_trail",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomTrailProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "BeeHypno",
+      "type": "potioneffect",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoMobEffect.java"
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BeeHypnoImmunity",
+      "type": "potioneffect",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_immunity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoImmunityMobEffect.java"
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BeeHypnoEffectExpires",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BeeHypnoOnEffectActiveTick",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_on_effect_active_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoOnEffectActiveTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BabyMoobloom",
+      "type": "animatedentity",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoobloomEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoobloomModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoobloomRenderer.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moobloom_biome_modifier.json"
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "MoobloomBreeding",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moobloom_breeding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoobloomBreedingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
+    },
+    {
+      "name": "BabyMoobloomAge",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "BabyMoobloomDrops",
+      "type": "loottable",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/entities/babymoobloom.json"
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "BabyMoobloomEntityDies",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "BabyMoobloomEntityIsHurt",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "BabyMoobloomOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "entity.tcmooblooms.moobloom": "Moobloom",
+      "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
+      "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
+      "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
+      "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
+      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Moobloom",
+        "children": [
+          {
+            "name": "Baby Moobloom",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Moolip",
+        "children": []
+      },
+      {
+        "name": "Bee Hypno Stuff",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "tcmooblooms",
+    "modName": "TCMooblooms",
+    "version": "1.0.0",
+    "author": "ginge, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [
+      "geckolib"
+    ],
+    "currentGenerator": "forge-1.19.2",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.tcmooblooms",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300110610
+}
