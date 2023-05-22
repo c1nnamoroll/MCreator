@@ -548,6 +548,24 @@
         ]
       },
       "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "Moolip",
+      "type": "animatedentity",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoolipRenderer.java"
+        ]
+      },
+      "path": "~/Moolip"
     }
   ],
   "variable_elements": [],
@@ -566,6 +584,7 @@
   ],
   "language_map": {
     "en_us": {
+      "entity.tcmooblooms.moolip": "Moolip",
       "entity.tcmooblooms.moobloom": "Moobloom",
       "subtitles.babymoobloomidle": "",
       "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
@@ -573,7 +592,8 @@
       "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
       "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
       "subtitles.babyidlesounds": "Baby Moobloom Idle",
-      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
+      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom",
+      "item.tcmooblooms.moolip_spawn_egg": "Moolip Spawn Egg"
     }
   },
   "foldersRoot": {

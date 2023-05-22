@@ -1,4 +1,5 @@
 {
+  "entity.tcmooblooms.moolip": "Moolip",
   "entity.tcmooblooms.moobloom": "Moobloom",
   "subtitles.babymoobloomidle": "",
   "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
@@ -6,5 +7,6 @@
   "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
   "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
   "subtitles.babyidlesounds": "Baby Moobloom Idle",
-  "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
+  "entity.tcmooblooms.baby_moobloom": "Baby Moobloom",
+  "item.tcmooblooms.moolip_spawn_egg": "Moolip Spawn Egg"
 }

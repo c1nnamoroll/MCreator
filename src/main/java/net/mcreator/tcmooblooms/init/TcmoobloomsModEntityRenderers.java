@@ -9,6 +9,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.mcreator.tcmooblooms.client.renderer.MoolipRenderer;
 import net.mcreator.tcmooblooms.client.renderer.MoobloomRenderer;
 import net.mcreator.tcmooblooms.client.renderer.BabyMoobloomRenderer;
 
@@ -18,5 +19,6 @@ public class TcmoobloomsModEntityRenderers {
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(TcmoobloomsModEntities.MOOBLOOM.get(), MoobloomRenderer::new);
 		event.registerEntityRenderer(TcmoobloomsModEntities.BABY_MOOBLOOM.get(), BabyMoobloomRenderer::new);
+		event.registerEntityRenderer(TcmoobloomsModEntities.MOOLIP.get(), MoolipRenderer::new);
 	}
 }
