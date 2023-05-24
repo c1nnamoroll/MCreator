@@ -107,6 +107,7 @@
     {
       "name": "Buttercups",
       "type": "particle",
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "buttercups",
@@ -516,6 +517,156 @@
         ]
       },
       "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "BabyMoobloomOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moobloom_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoobloomOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom/Baby Moobloom"
+    },
+    {
+      "name": "Moolip",
+      "type": "animatedentity",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
+          "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoolipRenderer.java"
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "MoolipDrops",
+      "type": "loottable",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/entities/moolip.json"
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "Tulips",
+      "type": "particle",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tulips",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/tcmooblooms/particles/tulips.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/particle/TulipsParticle.java"
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "MoolipEntityDies",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoolipEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "MoolipOnEntityTickUpdate",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoolipOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moobloom"
     }
   ],
   "variable_elements": [],
@@ -534,6 +685,7 @@
   ],
   "language_map": {
     "en_us": {
+      "entity.tcmooblooms.moolip": "Moolip",
       "entity.tcmooblooms.moobloom": "Moobloom",
       "subtitles.babymoobloomidle": "",
       "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
@@ -541,7 +693,8 @@
       "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
       "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
       "subtitles.babyidlesounds": "Baby Moobloom Idle",
-      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom"
+      "entity.tcmooblooms.baby_moobloom": "Baby Moobloom",
+      "item.tcmooblooms.moolip_spawn_egg": "Moolip Spawn Egg"
     }
   },
   "foldersRoot": {

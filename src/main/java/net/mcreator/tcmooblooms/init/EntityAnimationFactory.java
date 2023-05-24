@@ -6,6 +6,7 @@ import net.minecraftforge.event.entity.living.LivingEvent;
 
 import net.mcreator.tcmooblooms.entity.MoolipEntity;
 import net.mcreator.tcmooblooms.entity.MoobloomEntity;
+import net.mcreator.tcmooblooms.entity.BabyMoolipEntity;
 import net.mcreator.tcmooblooms.entity.BabyMoobloomEntity;
 
 @Mod.EventBusSubscriber
@@ -28,6 +29,13 @@ public class EntityAnimationFactory {
 				}
 			}
 			if (event.getEntity() instanceof MoolipEntity syncable) {
+				String animation = syncable.getSyncedAnimation();
+				if (!animation.equals("undefined")) {
+					syncable.setAnimation("undefined");
+					syncable.animationprocedure = animation;
+				}
+			}
+			if (event.getEntity() instanceof BabyMoolipEntity syncable) {
 				String animation = syncable.getSyncedAnimation();
 				if (!animation.equals("undefined")) {
 					syncable.setAnimation("undefined");

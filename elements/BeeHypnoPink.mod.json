@@ -1,0 +1,23 @@
+{
+  "_fv": 39,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Bee Hypnotize Pink",
+    "icon": "beehypnopink.png",
+    "color": {
+      "value": -13057,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": false,
+    "renderStatusInHUD": false,
+    "onActiveTick": {
+      "name": "BeeHypnoPinkOnEffectActiveTick"
+    },
+    "onExpired": {
+      "name": "BeeHypnoPinkEffectExpires"
+    }
+  }
+}

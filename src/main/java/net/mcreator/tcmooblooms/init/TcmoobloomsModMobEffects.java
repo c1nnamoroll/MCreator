@@ -10,6 +10,8 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.effect.MobEffect;
 
+import net.mcreator.tcmooblooms.potion.BeeHypnoPinkMobEffect;
+import net.mcreator.tcmooblooms.potion.BeeHypnoPinkImmunityMobEffect;
 import net.mcreator.tcmooblooms.potion.BeeHypnoMobEffect;
 import net.mcreator.tcmooblooms.potion.BeeHypnoImmunityMobEffect;
 import net.mcreator.tcmooblooms.TcmoobloomsMod;
@@ -18,4 +20,6 @@ public class TcmoobloomsModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(ForgeRegistries.MOB_EFFECTS, TcmoobloomsMod.MODID);
 	public static final RegistryObject<MobEffect> BEE_HYPNO_IMMUNITY = REGISTRY.register("bee_hypno_immunity", () -> new BeeHypnoImmunityMobEffect());
 	public static final RegistryObject<MobEffect> BEE_HYPNO = REGISTRY.register("bee_hypno", () -> new BeeHypnoMobEffect());
+	public static final RegistryObject<MobEffect> BEE_HYPNO_PINK = REGISTRY.register("bee_hypno_pink", () -> new BeeHypnoPinkMobEffect());
+	public static final RegistryObject<MobEffect> BEE_HYPNO_PINK_IMMUNITY = REGISTRY.register("bee_hypno_pink_immunity", () -> new BeeHypnoPinkImmunityMobEffect());
 }

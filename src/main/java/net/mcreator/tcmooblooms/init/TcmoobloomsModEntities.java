@@ -18,6 +18,7 @@ import net.minecraft.world.entity.Entity;
 
 import net.mcreator.tcmooblooms.entity.MoolipEntity;
 import net.mcreator.tcmooblooms.entity.MoobloomEntity;
+import net.mcreator.tcmooblooms.entity.BabyMoolipEntity;
 import net.mcreator.tcmooblooms.entity.BabyMoobloomEntity;
 import net.mcreator.tcmooblooms.TcmoobloomsMod;
 
@@ -36,6 +37,10 @@ public class TcmoobloomsModEntities {
 			EntityType.Builder.<MoolipEntity>of(MoolipEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(MoolipEntity::new)
 
 					.sized(0.9f, 1.4f));
+	public static final RegistryObject<EntityType<BabyMoolipEntity>> BABY_MOOLIP = register("baby_moolip",
+			EntityType.Builder.<BabyMoolipEntity>of(BabyMoolipEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(BabyMoolipEntity::new)
+
+					.sized(0.7f, 0.45f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -47,6 +52,7 @@ public class TcmoobloomsModEntities {
 			MoobloomEntity.init();
 			BabyMoobloomEntity.init();
 			MoolipEntity.init();
+			BabyMoolipEntity.init();
 		});
 	}
 
@@ -55,5 +61,6 @@ public class TcmoobloomsModEntities {
 		event.put(MOOBLOOM.get(), MoobloomEntity.createAttributes().build());
 		event.put(BABY_MOOBLOOM.get(), BabyMoobloomEntity.createAttributes().build());
 		event.put(MOOLIP.get(), MoolipEntity.createAttributes().build());
+		event.put(BABY_MOOLIP.get(), BabyMoolipEntity.createAttributes().build());
 	}
 }

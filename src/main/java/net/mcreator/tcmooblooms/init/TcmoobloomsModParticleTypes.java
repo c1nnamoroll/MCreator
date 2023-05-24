@@ -15,5 +15,6 @@ import net.mcreator.tcmooblooms.TcmoobloomsMod;
 
 public class TcmoobloomsModParticleTypes {
 	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, TcmoobloomsMod.MODID);
+	public static final RegistryObject<SimpleParticleType> TULIPS = REGISTRY.register("tulips", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> BUTTERCUPS = REGISTRY.register("buttercups", () -> new SimpleParticleType(false));
 }
