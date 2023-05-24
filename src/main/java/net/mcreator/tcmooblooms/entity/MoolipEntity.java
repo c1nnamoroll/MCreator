@@ -57,8 +57,8 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.tcmooblooms.procedures.MoolipOnEntityTickUpdateProcedure;
-import net.mcreator.tcmooblooms.procedures.MoolipHoneyProcedure;
-import net.mcreator.tcmooblooms.procedures.MoolipEntityDiesProcedure;
+import net.mcreator.tcmooblooms.procedures.MoobloomHoneyProcedure;
+import net.mcreator.tcmooblooms.procedures.MoobloomEntityDiesProcedure;
 import net.mcreator.tcmooblooms.init.TcmoobloomsModEntities;
 
 import java.util.List;
@@ -145,7 +145,7 @@ public class MoolipEntity extends Animal implements IAnimatable {
 	@Override
 	public void die(DamageSource source) {
 		super.die(source);
-		MoolipEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
+		MoobloomEntityDiesProcedure.execute(this.level, this.getX(), this.getY(), this.getZ(), this);
 	}
 
 	@Override
@@ -159,7 +159,7 @@ public class MoolipEntity extends Animal implements IAnimatable {
 		Entity entity = this;
 		Level world = this.level;
 
-		MoolipHoneyProcedure.execute(world, x, y, z, entity, sourceentity);
+		MoobloomHoneyProcedure.execute(world, x, y, z, entity, sourceentity);
 		return retval;
 	}
 

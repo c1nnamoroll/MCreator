@@ -559,10 +559,10 @@
       "registry_name": "moolip",
       "metadata": {
         "files": [
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
           "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
           "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoolipRenderer.java"
         ]
       },
@@ -838,10 +838,10 @@
       "registry_name": "baby_moolip",
       "metadata": {
         "files": [
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoolipRenderer.java",
           "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoolipEntity.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoolipModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoolipRenderer.java"
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoolipModel.java"
         ]
       },
       "path": "~/Moolip/BabyMoolip"
@@ -881,6 +881,20 @@
         ]
       },
       "path": "~/Moolip"
+    },
+    {
+      "name": "BabyMoolipDrops",
+      "type": "loottable",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/baby_moolip_drops.json"
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
     }
   ],
   "variable_elements": [],

@@ -100,10 +100,10 @@
       "value": "entity.cow.step"
     },
     "whenMobDies": {
-      "name": "MoolipEntityDies"
+      "name": "MoobloomEntityDies"
     },
     "onRightClickedOn": {
-      "name": "MoolipHoney"
+      "name": "MoobloomHoney"
     },
     "onMobTickUpdate": {
       "name": "MoolipOnEntityTickUpdate"

@@ -558,25 +558,11 @@
       "registry_name": "moolip",
       "metadata": {
         "files": [
-          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
           "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
           "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoolipRenderer.java"
-        ]
-      },
-      "path": "~/Moolip"
-    },
-    {
-      "name": "MoolipDrops",
-      "type": "loottable",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "moolip_drops",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/tcmooblooms/loot_tables/entities/moolip.json"
         ]
       },
       "path": "~/Moolip"
