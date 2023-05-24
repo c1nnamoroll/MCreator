@@ -559,10 +559,10 @@
       "registry_name": "moolip",
       "metadata": {
         "files": [
-          "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
           "src/main/resources/data/tcmooblooms/forge/biome_modifier/moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/MoolipEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/MoolipModel.java",
+          "src/main/resources/assets/tcmooblooms/models/item/moolip_spawn_egg.json",
           "src/main/java/net/mcreator/tcmooblooms/client/renderer/MoolipRenderer.java"
         ]
       },
@@ -838,10 +838,10 @@
       "registry_name": "baby_moolip",
       "metadata": {
         "files": [
-          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoolipRenderer.java",
-          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoolipEntity.java",
           "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moolip_biome_modifier.json",
-          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoolipModel.java"
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoolipEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoolipModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoolipRenderer.java"
         ]
       },
       "path": "~/Moolip/BabyMoolip"
@@ -892,6 +892,210 @@
       "metadata": {
         "files": [
           "src/main/resources/data/tcmooblooms/loot_tables/baby_moolip_drops.json"
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipAge",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipEntityDies",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipEntityIsHurt",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "StepSoundPink",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "step_sound_pink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/StepSoundPinkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Moolip/BabyMoolip"

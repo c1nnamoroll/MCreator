@@ -29,7 +29,6 @@ import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.PanicGoal;
 import net.minecraft.world.entity.ai.goal.LeapAtTargetGoal;
-import net.minecraft.world.entity.ai.goal.FollowParentGoal;
 import net.minecraft.world.entity.ai.goal.FloatGoal;
 import net.minecraft.world.entity.ai.goal.BreedGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -107,13 +106,12 @@ public class MoobloomEntity extends Animal implements IAnimatable {
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new TemptGoal(this, 1, Ingredient.of(Items.WHEAT), false));
-		this.goalSelector.addGoal(2, new FollowParentGoal(this, 0.8));
-		this.goalSelector.addGoal(3, new BreedGoal(this, 1));
-		this.goalSelector.addGoal(4, new PanicGoal(this, 1.2));
-		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1));
-		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(8, new LeapAtTargetGoal(this, (float) 0.5));
+		this.goalSelector.addGoal(2, new BreedGoal(this, 1));
+		this.goalSelector.addGoal(3, new PanicGoal(this, 1.2));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 1));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
+		this.goalSelector.addGoal(6, new FloatGoal(this));
+		this.goalSelector.addGoal(7, new LeapAtTargetGoal(this, (float) 0.5));
 	}
 
 	@Override

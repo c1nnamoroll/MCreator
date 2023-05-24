@@ -686,6 +686,7 @@
     {
       "name": "BeeHypnoPinkOnEffectActiveTick",
       "type": "procedure",
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bee_hypno_pink_on_effect_active_tick",
@@ -717,6 +718,387 @@
         ]
       },
       "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BeeHypnoPinkImmunity",
+      "type": "potioneffect",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_pink_immunity",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/potion/BeeHypnoPinkImmunityMobEffect.java"
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "BeeHypnoPinkEffectExpires",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bee_hypno_pink_effect_expires",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BeeHypnoPinkEffectExpiresProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Bee Hypno Stuff"
+    },
+    {
+      "name": "MoolipHoney",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_honey",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoolipHoneyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "MoolipTrail",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_trail",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoolipTrailProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "BabyMoolip",
+      "type": "animatedentity",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/forge/biome_modifier/baby_moolip_biome_modifier.json",
+          "src/main/java/net/mcreator/tcmooblooms/entity/BabyMoolipEntity.java",
+          "src/main/java/net/mcreator/tcmooblooms/entity/model/BabyMoolipModel.java",
+          "src/main/java/net/mcreator/tcmooblooms/client/renderer/BabyMoolipRenderer.java"
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "MoolipBreeding",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moolip_breeding",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/MoolipBreedingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip"
+    },
+    {
+      "name": "BabyMoolipDrops",
+      "type": "loottable",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_drops",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/tcmooblooms/loot_tables/baby_moolip_drops.json"
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipAge",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_age",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipAgeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipEntityDies",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_entity_dies",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipEntityDiesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipOnEntityTickUpdate",
+      "type": "procedure",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_on_entity_tick_update",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipOnEntityTickUpdateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipEntityIsHurt",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_entity_is_hurt",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipEntityIsHurtProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "StepSoundPink",
+      "type": "procedure",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "step_sound_pink",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/StepSoundPinkProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
+    },
+    {
+      "name": "BabyMoolipOnInitialEntitySpawn",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "baby_moolip_on_initial_entity_spawn",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/tcmooblooms/procedures/BabyMoolipOnInitialEntitySpawnProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Moolip/BabyMoolip"
     }
   ],
   "variable_elements": [],
@@ -735,17 +1117,20 @@
   ],
   "language_map": {
     "en_us": {
-      "entity.tcmooblooms.moolip": "Moolip",
-      "entity.tcmooblooms.moobloom": "Moobloom",
       "subtitles.babymoobloomidle": "",
-      "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
       "item.tcmooblooms.moobloom_spawn_egg": "Moobloom Spawn Egg",
       "effect.tcmooblooms.bee_hypno_immunity": "Bee Hypno Immunity",
+      "item.tcmooblooms.moolip_spawn_egg": "Moolip Spawn Egg",
+      "entity.tcmooblooms.moolip": "Moolip",
+      "effect.tcmooblooms.bee_hypno_pink_immunity": "Bee Hypno Pink Immunity",
+      "entity.tcmooblooms.moobloom": "Moobloom",
+      "item.tcmooblooms.baby_moobloom_spawn_egg": "Baby Moobloom Spawn Egg",
+      "item.tcmooblooms.baby_moolip_spawn_egg": "Baby Moolip Spawn Egg",
       "effect.tcmooblooms.bee_hypno": "Bee Hypnotize",
-      "effect.tcmooblooms.bee_hypno_pink": "Bee Hypnotize",
+      "effect.tcmooblooms.bee_hypno_pink": "Bee Hypnotize Pink",
       "subtitles.babyidlesounds": "Baby Moobloom Idle",
       "entity.tcmooblooms.baby_moobloom": "Baby Moobloom",
-      "item.tcmooblooms.moolip_spawn_egg": "Moolip Spawn Egg"
+      "entity.tcmooblooms.baby_moolip": "Baby Moolip"
     }
   },
   "foldersRoot": {
@@ -762,7 +1147,12 @@
       },
       {
         "name": "Moolip",
-        "children": []
+        "children": [
+          {
+            "name": "BabyMoolip",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Bee Hypno Stuff",

@@ -99,11 +99,23 @@
     "stepSound": {
       "value": ""
     },
+    "whenMobDies": {
+      "name": "BabyMoolipEntityDies"
+    },
+    "whenMobIsHurt": {
+      "name": "BabyMoolipEntityIsHurt"
+    },
+    "onMobTickUpdate": {
+      "name": "BabyMoolipOnEntityTickUpdate"
+    },
+    "onInitialSpawn": {
+      "name": "BabyMoolipOnInitialEntitySpawn"
+    },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"follow_item_in_hands\"><field name=\"speed\">1</field><field name=\"scared\">FALSE</field><field name=\"condition\">null,null</field><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Items.WHEAT</field></block></value><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
     "model": "babymoolip.geo.json",
-    "groupName": "",
+    "groupName": "head",
     "animation1": "animation.BabyMoolip.Idle",
     "animation2": "animation.BabyMoolip.Walk",
     "animation3": "",
@@ -126,7 +138,7 @@
     "breedable": true,
     "tameable": false,
     "disableDeathRotation": false,
-    "headMovement": false,
+    "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],
     "ranged": false,
