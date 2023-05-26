@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": [
+    "old_growth_birch_forest",
+    "forest",
+    "sunflower_plains",
+    "plains",
+    "flower_forest",
+    "birch_forest",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "tcmooblooms:moolip",
+    "weight": 7,
+    "minCount": 2,
+    "maxCount": 2
+  }
+}
